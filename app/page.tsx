@@ -51,10 +51,21 @@ export default function Home() {
       </a>
       <div className="site-layout" id="top">
         <aside className="sidebar">
-          <a className="identity" href="#top" aria-label="Pranay Kashyap, home">
-            <span className="monogram">
-              pk<span>.</span>
-            </span>
+          <a
+            className="identity"
+            href="./pranay-icassp-2024.jpg"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="View Pranay’s photo at ICASSP 2024"
+          >
+            <Image
+              src="./pranay-icassp-2024.jpg"
+              alt="Pranay Kashyap at ICASSP 2024 in Korea"
+              width={1152}
+              height={2048}
+              unoptimized
+              priority
+            />
           </a>
           <div className="sidebar-name">Pranay Kashyap</div>
           <p className="sidebar-role">
@@ -92,17 +103,6 @@ export default function Home() {
               Résumé ↗
             </a>
           </div>
-          <nav aria-label="Main navigation">
-            <a href="#research">
-              Publications <span>05</span>
-            </a>
-            <a href="#current">Current research</a>
-            <a href="#patents">
-              Patents <span>03</span>
-            </a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education & awards</a>
-          </nav>
           <p className="sidebar-note">
             Video understanding.
             <br />
@@ -480,7 +480,6 @@ export default function Home() {
             </p>
             <div>
               <span>© 2026 Pranay Kashyap</span>
-              <a href="#top">Back to top ↑</a>
             </div>
           </footer>
         </main>

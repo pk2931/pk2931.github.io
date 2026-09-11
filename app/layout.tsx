@@ -10,6 +10,7 @@ const githubSite = githubRepo.endsWith(".github.io")
 
 export const metadata: Metadata = {
   metadataBase: new URL(githubSite),
+  alternates: { canonical: "https://pk2931.github.io/" },
   title: "Pranay Kashyap | Machine Learning & Research",
   description:
     "Machine Learning Engineer at Kaliber AI. Video understanding, multimodal world models, and LLM dynamics. Five peer-reviewed papers and three patent publications.",

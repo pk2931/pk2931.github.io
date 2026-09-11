@@ -14,8 +14,8 @@ export const papers = [
     detail:
       "This work brings image segmentation representations to temporal video understanding: finding meaningful changes without relying on a fixed set of action categories. It connects foundation models with a practical video segmentation task.",
     highlight: "Training-free video understanding",
-    image: "sam-gebd.svg",
-    caption: "Method illustration · SAM representations → event boundaries",
+    image: "sam-gebd.webp",
+    caption: "Figure 1 · SAM-GEBD overview · ICASSP 2024",
     links: [
       {
         label: "Paper",
@@ -70,8 +70,8 @@ export const papers = [
     detail:
       "Comparing video features across time reveals where an event stays consistent and where it changes. The work investigates how to use that structure in a compact model for generic event boundary detection.",
     highlight: "Efficient temporal representations",
-    image: "similarity.svg",
-    caption: "Method illustration · temporal self-similarity",
+    image: "similarity.webp",
+    caption: "Figure 1 · Proposed architecture · ICASSP 2023",
     links: [
       {
         label: "Paper",
@@ -95,8 +95,8 @@ export const papers = [
     detail:
       "Instead of reconstructing every frame, the method works with the information already stored by a video codec. Sparse residual similarity captures repeating action structure while a lightweight backbone keeps computation low.",
     highlight: "91.5% smaller model · 91% fewer FLOPs",
-    image: "repetition.svg",
-    caption: "Method illustration · compressed signals → repetition count",
+    image: "repetition.webp",
+    caption: "Figure 2 · Architecture comparison · ICASSP 2023",
     links: [
       {
         label: "Paper",
@@ -125,8 +125,8 @@ export const papers = [
     detail:
       "The work explores semantic context as a complement to visual input for personalized mobile communication. Joint text and image learning helps disambiguate drawings that look similar but convey different meanings.",
     highlight: "Joint language + visual understanding",
-    image: "samnet.svg",
-    caption: "Method illustration · drawing + text → emoji prediction",
+    image: "samnet.webp",
+    caption: "Figure 5 · Multimodal architectures · CVIP 2022",
     links: [
       {
         label: "Paper",

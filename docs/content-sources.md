@@ -23,3 +23,15 @@ Application identifiers intentionally used consistently instead of mixing grant 
 ## Current work
 
 The world-model diagram is an architecture overview drawn from the user's description. The conversation diagram is conceptual, not experimental data. Neither entry claims a publication, benchmark, publicly available codebase, or measured outcome beyond what the user supplied.
+
+## Original-figure update
+
+The following replaces the earlier schematic figure provenance for published papers:
+
+- SAM-GEBD: Figure 1, “SAM-GEBD Overview,” extracted from page 2 of the user-supplied IEEE PDF.
+- Self-Similarity: Figure 1, “The proposed architecture,” extracted from page 2 of the user-supplied IEEE PDF.
+- Repetition Counting: Figure 2, architecture comparison, extracted from page 2 of the user-supplied IEEE PDF.
+- SAMNet: Figure 5, “Multimodal Architectures,” downloaded from https://link.springer.com/chapter/10.1007/978-3-031-31417-9_10/figures/5 .
+- FlowGEBD: original Figure 3 retained.
+
+All four superseded publication SVGs have been removed. Only figure regions are hosted, not complete publisher PDFs. The current-research diagrams are unchanged. The user-supplied IMG_2902.jpg is copied without altering the original image, with CSS framing in the sidebar. Section navigation and the back-to-top shortcut have been removed. The canonical URL is https://pk2931.github.io/. Query parameters never represented a separate deployment.
