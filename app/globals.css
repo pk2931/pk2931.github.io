@@ -126,12 +126,6 @@ strong {
   font-size: 13px;
 }
 
-.sidebar-note {
-  font-size: 12px;
-  color: #7a8793;
-  margin-top: 28px;
-  line-height: 1.8;
-}
 main {
   min-width: 0;
 }
@@ -554,9 +548,6 @@ footer > div {
     margin-left: 6px;
   }
   .sidebar-contact,
-  .sidebar-note {
-    display: none;
-  }
   .profile-links {
     grid-column: 1/-1;
     display: flex;

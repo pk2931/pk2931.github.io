@@ -103,13 +103,6 @@ export default function Home() {
               Résumé ↗
             </a>
           </div>
-          <p className="sidebar-note">
-            Video understanding.
-            <br />
-            World models.
-            <br />
-            Learning dynamics.
-          </p>
         </aside>
         <main id="main">
           <header className="intro">
@@ -118,25 +111,48 @@ export default function Home() {
             </p>
             <h1>Pranay Kashyap</h1>
             <p>
-              Hi! I’m a Machine Learning Engineer at <strong>Kaliber AI</strong>
-              , working on <strong>multimodal world models</strong> and the{" "}
-              <strong>geometry of LLM conversations</strong>. I’m interested in
-              how models understand change—across video, physical dynamics, and
-              dialogue.
+              I’m a Machine Learning Engineer at <strong>Kaliber AI</strong> in
+              the San Francisco Bay Area. My work connects computer vision,
+              representation learning, and generative AI, from developing new
+              methods to training models and deploying them in real products.
+              I’m particularly interested in building systems that can
+              understand video, anticipate physical motion, and interact
+              naturally with people.
             </p>
             <p>
-              Previously, I worked on on-device Video AI at{" "}
-              <strong>Samsung Research</strong>, where my work spanned
-              lightweight neural networks, event boundary detection, and video
-              intelligence for Samsung’s Enhance-X app. I hold an M.S. in
-              Applied Data Science from <strong>New York University</strong> and
-              a B.Tech. from <strong>NIT Srinagar</strong>.
+              At Kaliber, I’m developing{" "}
+              <strong>multimodal world models</strong> that combine visual
+              representations with 3D state history to forecast future
+              trajectories and generate video. This includes training
+              autoregressive predictors and RGB decoders to produce 60 future
+              frames from 32 frames of visual context. I also study how language
+              models influence one another during multi-turn conversations,
+              analyzing their hidden representations and testing causal
+              interventions through <strong>activation steering</strong>. My
+              earlier work at Kaliber included real-time voice assistants,
+              multimodal person tracking, and GPU inference systems.
+            </p>
+            <p>
+              Previously, I spent over two years at{" "}
+              <strong>Samsung Research</strong> developing efficient video AI
+              for mobile devices. I led the implementation of event boundary
+              detection for{" "}
+              <strong>Video Moments in Samsung’s Enhance-X app</strong>, helping
+              users find meaningful moments in their videos. My work covered
+              lightweight neural architectures, training-free video
+              understanding, and on-device optimization, including a 71.4%
+              reduction in model size through quantization.
             </p>
             <p className="intro-research">
-              My research includes{" "}
-              <a href="#research">five peer-reviewed papers</a> at ICASSP, WACV,
-              and CVIP, and <a href="#patents">three patent publications</a> in
-              video understanding and generation.
+              I’ve co-authored <a href="#research">five peer-reviewed papers</a>{" "}
+              at ICASSP, WACV, and CVIP, including first-author work on
+              <a href="#sam-gebd"> SAM-GEBD</a>, and contributed to
+              <a href="#patents"> three patent publications</a> in video
+              processing. I received Samsung’s{" "}
+              <strong>Best Paper Award, Bronze, in 2024</strong>. I hold an M.S.
+              in Applied Data Science from <strong>New York University</strong>{" "}
+              and a B.Tech. in Information Technology from
+              <strong> NIT Srinagar</strong>.
             </p>
             <div className="intro-bottom">
               <a href="mailto:pranayk1908@gmail.com">
