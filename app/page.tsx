@@ -74,7 +74,7 @@ export default function Home() {
             <strong>Kaliber AI</strong>
           </p>
           <div className="sidebar-contact">
-            <span>San Francisco Bay Area</span>
+            <span>San Mateo, California</span>
             <a href="mailto:pranayk1908@gmail.com">pranayk1908@gmail.com</a>
           </div>
           <div className="profile-links">
@@ -112,7 +112,7 @@ export default function Home() {
             <h1>Pranay Kashyap</h1>
             <p>
               Hi! I’m a Machine Learning Engineer at <strong>Kaliber AI</strong>{" "}
-              in the San Francisco Bay Area, working on predictive world models
+              in San Mateo, California, working on predictive world models
               and the dynamics of LLM conversations. Previously, I worked at{" "}
               <strong>Samsung Research</strong>, developing on-device video AI
               for Samsung Galaxy devices. I hold an M.S. in Applied Data Science
