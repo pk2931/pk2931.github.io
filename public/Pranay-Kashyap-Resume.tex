@@ -1,0 +1,98 @@
+\documentclass[letterpaper]{article}
+\usepackage[left=0.45in,right=0.45in,top=0.23in,bottom=0.28in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{ragged2e}
+\usepackage{microtype}
+\usepackage{tabularx}
+% Keep words intact while allowing flexible wrapping within the margins.
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=1em
+\tolerance=1000
+\setlength{\RaggedRightRightskip}{0pt plus 2em}
+% Discourage short endings but allow a break when needed to avoid overflow.
+\clubpenalty=10000
+\widowpenalty=10000
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=10.5pt,labelsep=3pt,itemsep=0.2pt,parsep=0pt,topsep=0.3pt,partopsep=0pt,before={\setlength{\parfillskip}{0pt plus 0.75\linewidth}}}
+\newcommand{\ressection}[1]{\par\vspace{3pt}{\fontsize{9}{10}\selectfont\bfseries #1}\par\vspace{1pt}\hrule height 0.5pt\vspace{1.25pt}}
+\newcommand{\job}[4]{\par\vspace{1.25pt}\noindent
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}X@{\hspace{8pt}}r@{}}
+\textbf{#1}\,|\, #2\,|\, #3 & \mbox{#4}
+\end{tabularx}\par}
+\begin{document}
+\fontsize{8.5}{9}\selectfont
+\RaggedRight
+\begin{center}
+{\fontsize{17}{20}\selectfont\bfseries Pranay Kashyap}\\[5pt]
+{\fontsize{7.2}{8.5}\selectfont San Francisco, California, United States\enspace|\enspace
+\href{mailto:pranayk1908@gmail.com}{\underline{pranayk1908@gmail.com}}\enspace|\enspace
+\href{tel:+13478741264}{\underline{(347) 874-1264}}\\[2pt]
+\href{https://www.linkedin.com/in/pranay1908/}{\underline{linkedin.com/in/pranay1908}}\enspace|\enspace
+\href{https://github.com/pk2931}{\underline{github.com/pk2931}}\enspace|\enspace
+\href{https://scholar.google.com/citations?user=kxzrCf4AAAAJ}{\underline{scholar.google.com/citations?user=kxzrCf4AAAAJ}}}
+\end{center}
+\vspace{-5pt}
+Machine Learning Engineer and AI Researcher with 3+ years of experience developing end-to-end ML systems, from novel model architectures and research prototypes to production deployment. Specializing in computer vision, multimodal AI, LLMs, and compute-efficient inference, with experience building real-time AI systems at Kaliber AI and shipping on-device intelligence at Samsung Research. Author of five peer-reviewed publications and co-inventor on two granted US patents, focused on advancing scalable, high-performance, and resource-efficient AI systems. \par
+\ressection{EDUCATION}
+\textbf{New York University}\hfill Sep 2024 - May 2026\\
+Master of Science, \textit{Applied Data Science}\par\vspace{1pt}
+\textbf{National Institute of Technology Srinagar}\hfill Aug 2018 - Jul 2022\\
+Bachelor of Technology, \textit{Information Technology}
+\ressection{SKILLS}
+\textbf{Languages \& Frameworks:} Python, C/C++, Java, Javascript, Kotlin, SQL, Go, Rust, PyTorch, TensorFlow, Hugging Face, scikit-learn, NumPy\par\vspace{0.25pt}
+\textbf{AI \& Research:} World Models, Deep Learning, Reinforcement Learning, Transformers, Computer Vision, Video AI, Multimodal Learning, Vision-Language Models, Diffusion Models, Self-Supervised and Contrastive Learning, Time-Series and Trajectory Forecasting, Robotics and Embodied AI, LLMs (Fine-Tuning, LoRA/PEFT, RLHF/DPO, RAG, Agents, Inference-Time Steering), Representation Engineering and Interpretability, Embeddings Search, Speech and Voice AI, Model Evaluation, Feature Engineering\par\vspace{0.25pt}
+\textbf{ML Systems:} Distributed Training (DDP/FSDP, DeepSpeed), Model Compression (Quantization, Pruning, Knowledge Distillation), LLM Serving (vLLM, TensorRT-LLM, Speculative Decoding, KV-Cache Optimization), GPU/Edge Inference (ONNX, TensorRT, Triton, CUDA), On-Device AI (Android, JNI/NDK, TFLite, Core ML, ExecuTorch), Real-Time Systems, Streaming APIs (WebSockets, gRPC, REST)\par\vspace{0.25pt}
+\textbf{MLOps \& Cloud:} AWS, Azure/GCP, Docker, Kubernetes, Terraform, CI/CD, FastAPI, Microservices, Data Pipelines, ML Monitoring, Git, Linux
+\ressection{WORK EXPERIENCE}
+\job{Kaliber AI}{Machine Learning Engineer}{San Mateo, CA}{Jun 2026 - Present}
+\begin{itemize}
+\item Built a 3D motion-forecasting model for objects on a conveyor belt that predicts how they move through collisions, side-rail contacts, and rebounds, forecasting 60 future positions over 2 seconds with 1.98~cm average displacement error (ADE) across 17,512 held-out samples.
+\item Designed target-conditioned visual attention that predicts trajectories without needing the partner object's state at inference time, reaching 4.28~cm ADE on visible collisions and 2.26~cm ADE on side-rail interactions.
+\item Detected contact events with 85\% recall, a 2.29-frame mean timing error, and 1.84\% false positives on ordinary motion, evaluated on a separate 1,140-sample set.
+\item Developed an inference-time steering method for Qwen and Gemma that shifts conversational behavior in a chosen direction without fine-tuning, with shift magnitude tracking steering strength (correlations of 0.87 on Qwen, 0.97 on Gemma). Adaptive steering hit the intended direction on 96.7\% of held-out Gemma responses, and applying it to only 24 of 48 layers gave statistically comparable effects.
+\end{itemize}
+\job{Kaliber AI}{Machine Learning Intern}{San Mateo, CA}{May 2025 - Dec 2025}
+\textit{Full-time May-Aug 2025, part-time Sep-Dec 2025 during MS.}\par
+\begin{itemize}
+\item Built the real-time voice assistant for CareMate, a home-robotics platform with customizable AI skills (physical therapist, admin assistant), using streaming Whisper-large-v3 ASR, LLMs, and TTS on a modular FastAPI/WebSocket backend. Achieved <2~s from end of speech to start of playback and stress-tested 10+ concurrent sessions with negligible latency degradation.
+\item Made conversations feel natural: Silero VAD with embedding-based speaker verification cut false triggers \textasciitilde40\% and suppressed background and non-target speech. Interrupt-driven TTS cancellation enabled barge-in, and partial transcripts, re-engineered audio chunking, and streaming playback cut perceived wait time 35\%.
+\item Took the system to production on AWS EC2 (g5.xlarge GPU), serving LLM and TTS models on Triton with TensorRT optimization. Split STT, VAD, LLM, TTS, and orchestration into Dockerized microservices with <5~s startup and one-command reproducible deployment, and built zero-downtime GitHub/Docker Hub CI/CD that cut deployment complexity >60\%.
+\item Built a multi-modal person tracking and re-identification system fusing YOLOv8 detection with FaceNet and FashionSigLIP embeddings, sustaining >90\% tracking stability through occlusions and re-entries and cutting false positives \textasciitilde85\%. CUDA batching, async processing, and adaptive frame skipping delivered 9~FPS and a >5x performance gain.
+\end{itemize}
+\job{Samsung Research}{Senior Software Engineer}{Bengaluru, KA}{Jul 2022 - Aug 2024}
+\textit{Earned early promotion to Senior Software Engineer in Mar 2023.}\par
+\begin{itemize}
+\item Led development of the GEBD model behind Video Moments, the on-device highlight-detection feature in Samsung's Enhance-X app, taking it from research prototype to commercial release on Galaxy S-series devices.
+\item Designed a phone-grade architecture with 3M trainable parameters and 19.5x fewer multi-adds for GEBD, improving F1 by 13.92\% over baseline while running at 84~ms/frame on a 1.5~GB-RAM Android CPU. Quantized it with ONNX for a 71.4\% size reduction at 0.1\% F1 loss.
+\item Owned production readiness end to end: built the C++ inference layer (JNI/NDK) so app engineers could integrate without touching model internals, cut clip-extraction latency 20\% with an FFmpeg pipeline and segment-extraction APIs, and gated every model update on accuracy, latency, and size KPIs. 
+\item Profiled latency, memory, and thermals across Galaxy device tiers, hardened the pipeline for long videos, unusual codecs, and low-memory devices, and drove integration with app, QA, and platform teams through release.
+\item Developed SAM-GEBD, a training-free boundary detector built on the Segment Anything Model. It reached 0.724~F1@0.05 on Kinetics-GEBD, ahead of every prior unsupervised method. Also developed FlowGEBD, an optical-flow method that set the prior best unsupervised result (0.713~F1@0.05) at 6.5~ms/frame on a Galaxy S21 Ultra.
+\item Built decoding-free repetition counting directly on compressed video, using 27~MB and 7.1~GFLOPs versus 321~MB and 79.6~GFLOPs for the RGB-based state of the art (-91.5\% size, -91\% FLOPs).
+\item Co-invented 3 patent filings (2 granted) on context-aware video segmentation, flow-guided diffusion for video transitions, and aspect-ratio-aware frame regeneration. Built an Android prototype of Video Screenshot, showcased at Techglanz'22 and selected for iFest'23.
+\end{itemize}
+\job{Samsung Research}{Software Engineer Intern}{Bengaluru, KA}{Jan 2022 - Jul 2022}
+\begin{itemize}
+\item Built a 3.5~MB multimodal text-and-drawing model for emoji prediction, improving top-3 accuracy 13.95\% over DigitalInk.
+\item Reformulated BSN/BMN from action proposal-confidence scoring to dense per-frame boundary regression for GEBD, trained on slowfast video features with class-weighted BCE over Gaussian-smoothed labels to handle extreme boundary sparsity.
+\item Developed self-similarity-based 3D filter pruning without post-training finetuning, achieving 12\% faster inference and 10\% smaller video models. Applied it to X3D in GEBD with near-zero accuracy loss for edge deployment.
+\end{itemize}
+\ressection{RESEARCH PAPERS \& PATENTS}
+\begin{itemize}[noitemsep]
+\item \href{https://link.springer.com/chapter/10.1007/978-3-031-31417-9_10}{SAMnet: Semantic Aware Multimodal Network for Emoji Drawing Classification} {| CVIP'22}
+\item \href{https://ieeexplore.ieee.org/abstract/document/10094742?casa_token=O1-jkGt_pP4AAAAA:2tRJlPsqdO62ZlhCQ_XRwfh1r-D2Y9ZheEcys1A08NI1-bq0TG-_sUkKudxL2yKUovyFPyimhO4G}{Repetition Counting from Compressed Videos Using Sparse Residual Similarity} {| ICASSP'23}
+\item \href{https://ieeexplore.ieee.org/abstract/document/10096176?casa_token=bGsSrvFJIw4AAAAA:Z-TvjRt6uOGOct_FusaKao7iSXYwCRpNy7JHz2bVOznAhVvK-6mSYgwCA7pZzH8e7iLypo1Ife44}{Self-Similarity is All You Need for Fast and Lightweight GEBD} {| ICASSP'23}
+\item \href{https://openaccess.thecvf.com/content/WACV2024/papers/Gothe_Whats_in_the_Flow_Exploiting_Temporal_Motion_Cues_for_Unsupervised_WACV_2024_paper.pdf}{What's in the Flow: Exploiting Temporal Motion Cues for Unsupervised GEBD} {| WACV'24}
+\item \href{https://ieeexplore.ieee.org/abstract/document/10447789?casa_token=zJbDCbfluQcAAAAA:trUo4xo6bc4uOfRRGFNpRhLSExfOGtp4T2BheVAIh34xaxtSrn09gNIOjMCCmibKHqYV1Bzu7yU}{SAM-GEBD: Zero-Cost Approach for Generic Event Boundary Detection} {| ICASSP'24}
+\item \href{https://patents.google.com/patent/US12277768B2/en}{Method and electronic device for generating a segment of a video} {| US12277768B2 | Granted}
+\item \href{https://patents.google.com/patent/US12548599B2/en}{Generating contextual transition effects in videos} {| US12548599B2 | Granted}
+\item \href{https://patents.google.com/patent/US20250233960A1/en}{Method for adaptive video display management based on region localized regeneration of frames} {| US20250233960A1 | Pending}
+\end{itemize}
+\end{document}

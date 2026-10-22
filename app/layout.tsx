@@ -13,14 +13,14 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://pk2931.github.io/" },
   title: "Pranay Kashyap | Machine Learning & Research",
   description:
-    "Machine Learning Engineer at Kaliber AI. Video understanding, multimodal world models, and LLM dynamics. Five peer-reviewed papers and three patent publications.",
+    "Machine Learning Engineer at Kaliber AI. Video understanding, multimodal world models, and LLM dynamics. Five peer-reviewed papers and two granted US patents and one pending application.",
   keywords: [
     "Pranay Kashyap",
     "Machine Learning Engineer",
     "Multimodal AI",
     "Computer Vision",
     "Voice AI",
-    "Kaliber Labs",
+    "Kaliber AI",
   ],
   authors: [{ name: "Pranay Kashyap" }],
   openGraph: {

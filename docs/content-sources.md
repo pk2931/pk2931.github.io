@@ -1,3 +1,7 @@
+# October 22, 2026 update
+
+Current experience, skills, numerical results, promotion timing (March 2023), and grant statuses follow the user-approved resume in `public/Pranay-Kashyap-Resume.tex`. These supersede the September descriptions below. Metrics are user-supplied, not independently reproduced. Current-work cards avoid obsolete 32-frame/RGB-decoder descriptions. Two granted records are US12277768B2 and US12548599B2, with US20250233960A1 pending. Original application drawings remain attributed to their source applications. The current resume is available at `/resume/`, with a downloadable LaTeX source. The old September PDF is retained only as an unlinked archive. Existing paper authorship, figures, and recognition entries are preserved.
+
 # Content and figure provenance
 
 Updated September 11, 2026. Biography, employment, education, awards, and engineering metrics come from the user-supplied Profile.pdf, PranaysResume.pdf, and current Kaliber role description. The supplied résumé is copied to public/Pranay-Kashyap-Resume.pdf. The 2025 Kaliber role uses the résumé's internship title; LinkedIn instead labels it Machine Learning Engineer. Samsung promotion dates follow LinkedIn.

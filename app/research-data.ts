@@ -13,7 +13,7 @@ export const papers = [
       "Can an image foundation model identify when an event changes in a video? We repurpose the Segment Anything Model for generic event boundary detection without task-specific training.",
     detail:
       "This work brings image segmentation representations to temporal video understanding: finding meaningful changes without relying on a fixed set of action categories. It connects foundation models with a practical video segmentation task.",
-    highlight: "Training-free video understanding",
+    highlight: "0.724 F1@0.05 on Kinetics-GEBD · No training",
     image: "sam-gebd.webp",
     caption: "Figure 1 · SAM-GEBD overview · ICASSP 2024",
     links: [
@@ -40,7 +40,7 @@ export const papers = [
       "Motion alone can reveal meaningful video events. FlowGEBD uses pixel tracking and flow normalization to detect boundaries without a task-trained neural network, reaching 0.713 F1@0.05 on Kinetics-GEBD.",
     detail:
       "The paper reports a 31.7 percentage-point improvement over the unsupervised baseline on Kinetics-GEBD, and an average F1 of 0.623 on TAPOS. Optical-flow cues capture changes in how a scene moves, rather than requiring predefined action labels.",
-    highlight: "0.713 F1@0.05 · Kinetics-GEBD",
+    highlight: "0.713 F1@0.05 · 6.5 ms/frame on Galaxy S21 Ultra",
     image: "flowgebd.webp",
     caption: "FlowGEBD · figure from the WACV 2024 paper",
     links: [
@@ -69,7 +69,7 @@ export const papers = [
       "A lightweight approach to finding meaningful moments in video. We use self-similarity to represent temporal structure and design efficient event boundary detection for constrained compute budgets.",
     detail:
       "Comparing video features across time reveals where an event stays consistent and where it changes. The work investigates how to use that structure in a compact model for generic event boundary detection.",
-    highlight: "Efficient temporal representations",
+    highlight: "3M parameters · 19.5x fewer multi-adds · 13.92% F1 gain",
     image: "similarity.webp",
     caption: "Figure 1 · Proposed architecture · ICASSP 2023",
     links: [
@@ -124,7 +124,7 @@ export const papers = [
       "A sketch is easier to understand in context. SAMNet combines drawing and text features in a multimodal network to recognize the emoji a user intends to draw.",
     detail:
       "The work explores semantic context as a complement to visual input for personalized mobile communication. Joint text and image learning helps disambiguate drawings that look similar but convey different meanings.",
-    highlight: "Joint language + visual understanding",
+    highlight: "3.5 MB edge model · 13.95% top-3 accuracy gain over DigitalInk",
     image: "samnet.webp",
     caption: "Figure 5 · Multimodal architectures · CVIP 2022",
     links: [
@@ -140,26 +140,29 @@ export const patents = [
   {
     id: "patent-segment",
     title: "Method and electronic device for generating a segment of a video",
-    number: "US20230368534A1",
+    number: "US12277768B2",
+    status: "Granted",
     year: "2023",
     summary:
       "Identify meaningful temporal boundaries from changes in subjects, actions, objects, and scene context to produce useful video segments.",
-    href: "https://patents.google.com/patent/US20230368534A1/en",
+    href: "https://patents.google.com/patent/US12277768B2/en",
   },
   {
     id: "patent-transition",
     title: "Generating contextual transition effects in videos",
-    number: "US20240321318A1",
+    number: "US12548599B2",
+    status: "Granted",
     year: "2024",
     summary:
       "Generate transitions that respond to a video’s content, using event changes, masked frames, and pixel motion to connect adjacent scenes.",
-    href: "https://patents.google.com/patent/US20240321318A1/en",
+    href: "https://patents.google.com/patent/US12548599B2/en",
   },
   {
     id: "patent-display",
     title:
       "Electronic device and method for adaptive video display management based on region localized regeneration of frames",
     number: "US20250233960A1",
+    status: "Pending",
     year: "2025",
     summary:
       "Adapt video to different display formats by preserving relationships between primary and secondary events while regenerating regions of the frame.",
