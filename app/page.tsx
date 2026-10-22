@@ -111,9 +111,9 @@ export default function Home() {
               MACHINE LEARNING · COMPUTER VISION · RESEARCH
             </p>
             <h1>Pranay Kashyap</h1>
-            <p className="intro-statement">From research ideas to AI that runs in the real world.</p>
-            <p>I’m a Machine Learning Engineer and AI Researcher at <strong>Kaliber AI</strong>, working on physical forecasting and LLM activation steering. Previously at <strong>Samsung Research</strong>, I helped take on-device video intelligence from prototype to commercial release on Galaxy S-series devices.</p>
-            <p>My work connects computer vision, multimodal learning, and efficient inference, from mobile CPUs to GPU services on AWS.</p>
+            <p className="intro-statement">Building world models and intelligent systems that connect perception, prediction, and action.</p>
+            <p>I’m a Machine Learning Engineer and AI Researcher at <strong>Kaliber AI</strong>, developing <strong>multimodal world models</strong> for physical interaction forecasting and <strong>inference-time steering</strong> of large language models. My work spans computer vision, representation learning, embodied AI, and efficient inference.</p>
+            <p>I turn research into deployed systems, from real-time voice and perception for home robotics to <strong>on-device video intelligence shipped on Samsung Galaxy devices</strong>. With five peer-reviewed publications and two granted US patents, I bring model research and production engineering together across edge devices and GPU infrastructure.</p>
             <div className="impact-strip" aria-label="Profile highlights">
               <div><strong>3+ years</strong><span>Research to production</span></div>
               <div><strong>5 papers</strong><span>ICASSP · WACV · CVIP</span></div>
