@@ -757,3 +757,32 @@ footer > div {
     max-height: 350px;
   }
 }
+
+/* Give measured outcomes space without crowding the research narrative. */
+.intro .intro-statement { font-size: clamp(23px, 3vw, 32px); line-height: 1.3; font-weight: 700; letter-spacing: -.7px; color: #263e51; }
+.impact-strip { display: grid; grid-template-columns: repeat(3, 1fr); margin: 28px 0; border-block: 1px solid var(--line); padding: 20px 0; gap: 18px; }
+.impact-strip strong { display: block; font-size: 23px; color: #285e49; }
+.impact-strip span { display: block; font-size: 11px; color: var(--muted); }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.project-card { padding: 24px; border: 1px solid #dce5e8; border-radius: 9px; background: #fff; }
+.project-card h3 { font-size: 20px; }
+.project-card > p { font-size: 13px; }
+.project-card .project-metric { font-size: 29px; font-weight: 900; letter-spacing: -.8px; color: #285e49; margin: 20px 0 0; }
+.project-card .metric-context { font-size: 11px; color: var(--muted); }
+.tracking-highlight { background: #eef4f1; padding: 22px 25px; border-left: 3px solid #4c7c66; margin-top: 20px; }
+.tracking-highlight p { font-size: 13px; margin: 7px 0 0; }
+.contribution-list { padding-left: 18px; color: #495766; font-size: 13px; }
+.contribution-list li { margin-block: 10px; }
+.skills-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.skills-grid article { border-top: 2px solid #dce6ef; padding-top: 15px; }
+.skills-grid h3 { font-size: 15px; }
+.skills-grid p { font-size: 12px; line-height: 1.85; color: #52616e; }
+.experience-row p.experience-note { font-size: 11px; color: var(--muted); }
+.resume-page { max-width: 960px; margin: auto; padding: 40px 28px; }
+.resume-page section { margin-top: 28px; }
+.resume-page article { margin-top: 22px; }
+.resume-page li { margin: 7px 0; }
+.resume-actions { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; padding-bottom: 30px; }
+@media (max-width: 760px) { .project-card { padding: 20px; } }
+@media (max-width: 520px) { .project-grid, .skills-grid { grid-template-columns: 1fr; } .impact-strip { gap: 10px; } .impact-strip strong { font-size: 20px; } .impact-strip span { font-size: 10px; } }
+@media print { .resume-actions { display: none; } .resume-page { padding: 0; max-width: none; font-size: 9pt; } .resume-page h1 { font-size: 22pt; } .resume-page h2 { font-size: 13pt; } .resume-page h3 { font-size: 11pt; } .resume-page li { margin-block: 3px; } .resume-page h2, .resume-page h3 { break-after: avoid; } }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { experience, skills } from "./profile-data";
 import { papers, patents } from "./research-data";
 
 const scholar = "https://scholar.google.com/citations?user=kxzrCf4AAAAJ&hl=en";
@@ -74,7 +75,7 @@ export default function Home() {
             <strong>Kaliber AI</strong>
           </p>
           <div className="sidebar-contact">
-            <span>San Mateo, California</span>
+            <span>San Francisco, California</span>
             <a href="mailto:pranayk1908@gmail.com">pranayk1908@gmail.com</a>
           </div>
           <div className="profile-links">
@@ -96,7 +97,7 @@ export default function Home() {
               LinkedIn ↗
             </a>
             <a
-              href="./Pranay-Kashyap-Resume.pdf"
+              href="./resume/"
               target="_blank"
               rel="noreferrer"
             >
@@ -110,15 +111,14 @@ export default function Home() {
               MACHINE LEARNING · COMPUTER VISION · RESEARCH
             </p>
             <h1>Pranay Kashyap</h1>
-            <p>
-              Hi! I’m a Machine Learning Engineer at <strong>Kaliber AI</strong>{" "}
-              in San Mateo, California, working on predictive world models
-              and the dynamics of LLM conversations. Previously, I worked at{" "}
-              <strong>Samsung Research</strong>, developing on-device video AI
-              for Samsung Galaxy devices. I hold an M.S. in Applied Data Science
-              from <strong>New York University</strong> and a B.Tech. in
-              Information Technology from <strong>NIT Srinagar</strong>.
-            </p>
+            <p className="intro-statement">From research ideas to AI that runs in the real world.</p>
+            <p>I’m a Machine Learning Engineer and AI Researcher at <strong>Kaliber AI</strong>, working on physical forecasting and LLM activation steering. Previously at <strong>Samsung Research</strong>, I helped take on-device video intelligence from prototype to commercial release on Galaxy S-series devices.</p>
+            <p>My work connects computer vision, multimodal learning, and efficient inference, from mobile CPUs to GPU services on AWS.</p>
+            <div className="impact-strip" aria-label="Profile highlights">
+              <div><strong>3+ years</strong><span>Research to production</span></div>
+              <div><strong>5 papers</strong><span>ICASSP · WACV · CVIP</span></div>
+              <div><strong>2 granted</strong><span>US patents + 1 pending</span></div>
+            </div>
             <div className="intro-bottom">
               <a href="mailto:pranayk1908@gmail.com">
                 Get in touch <span aria-hidden="true">↗</span>
@@ -152,6 +152,17 @@ export default function Home() {
                 </p>
               </article>
             </div>
+          </section>
+          <section id="current" className="section">
+            <header className="section-heading"><h2>Selected work</h2><span className="section-meta">Research + production systems</span></header>
+            <p className="section-description">Forecasting physical interactions, steering language models, and shipping real-time AI.</p>
+            <div className="project-grid">
+              <article className="project-card"><p className="venue">Kaliber AI · World models</p><h3>Predicting motion through contact</h3><p>Multimodal 3D forecasting for conveyor-belt objects through collisions, rail contacts, and rebounds. Target-conditioned visual attention works without the partner object's state at inference.</p><p className="project-metric">1.98 cm ADE</p><p className="metric-context">60 future positions over 2 seconds · 17,512 held-out samples</p><details><summary>Evaluation details</summary><p>Visible collisions: 4.28 cm ADE. Side-rail interactions: 2.26 cm ADE. A separate 1,140-sample interaction evaluation achieved 85% contact recall, 2.29-frame mean timing error, and a 1.84% ordinary-motion false-positive rate.</p></details></article>
+              <article className="project-card"><p className="venue">Kaliber AI · LLM research</p><h3>Steering behavior without fine-tuning</h3><p>Inference-time activation steering for Qwen and Gemma. Adaptive interventions shift conversational behavior without changing model weights.</p><p className="project-metric">96.7%</p><p className="metric-context">Intended-direction responses on held-out Gemma evaluation</p><details><summary>Steering and localization</summary><p>Shift magnitude tracks steering strength with correlations of 0.87 on Qwen and 0.97 on Gemma. Interventions in 24 of 48 layers produced statistically comparable effects.</p></details></article>
+              <article className="project-card"><p className="venue">Samsung Research · Shipped on Galaxy</p><h3>Video Moments in Enhance-X</h3><p>On-device highlight detection, from GEBD research to commercial release. Built the C++ JNI/NDK inference layer, FFmpeg extraction pipeline, and release validation.</p><p className="project-metric">71.4% smaller</p><p className="metric-context">ONNX quantization with 0.1% F1 loss</p><details><summary>Engineering for the device</summary><p>A 3M-parameter architecture with 19.5x fewer multi-adds and a 13.92% F1 gain over baseline ran at 84 ms/frame on a 1.5 GB-RAM Android CPU. Clip extraction latency fell 20%. Device profiling covered memory, thermals, codecs, and low-memory fallbacks.</p></details></article>
+              <article className="project-card"><p className="venue">Kaliber AI · Voice + robotics</p><h3>CareMate’s real-time voice assistant</h3><p>Streaming Whisper-large-v3, LLMs, and interruptible TTS on FastAPI/WebSockets. Speaker verification and Silero VAD keep conversations focused on the target speaker.</p><p className="project-metric">&lt;2 seconds</p><p className="metric-context">End of speech to playback · 10+ concurrent sessions tested</p><details><summary>Production pipeline</summary><p>False triggers fell approximately 40% and perceived wait time fell 35%. Docker microservices on AWS EC2 g5.xlarge serve Triton/TensorRT inference with under 5-second startup and zero-downtime CI/CD.</p></details></article>
+            </div>
+            <aside className="tracking-highlight"><strong>Perception for home robotics</strong><p>YOLOv8 + FaceNet + FashionSigLIP person tracking held &gt;90% stability through occlusion and re-entry, with approximately 85% fewer false positives. CUDA batching, asynchronous processing, and adaptive frame skipping delivered 9 FPS and a &gt;5x speedup.</p></aside>
           </section>
           <section id="research" className="section">
             <header className="section-heading">
@@ -200,7 +211,7 @@ export default function Home() {
                       ))}
                     </p>
                     <p className="tldr">
-                      <span>TL;DR</span> {paper.summary}
+                      <span>In brief</span> {paper.summary}
                     </p>
                     <p className="finding">{paper.highlight}</p>
                     <Links items={paper.links} />
@@ -213,100 +224,16 @@ export default function Home() {
               ))}
             </div>
           </section>
-          <section id="current" className="section">
-            <header className="section-heading">
-              <h2>Current research</h2>
-              <span className="section-meta">Kaliber AI · 2026–present</span>
-            </header>
-            <p className="section-description">
-              Learning how physical systems evolve and how language models
-              influence one another.
-            </p>
-            <article className="research-row">
-              <Figure
-                file="world-model.svg"
-                alt="32-frame visual context and 3D history feed a predictive world model to forecast 60 future states and RGB frames"
-                caption="Architecture overview · ongoing work"
-              />
-              <div className="research-copy">
-                <div className="venue">
-                  World models · Representation learning
-                </div>
-                <h3>From visual context to future dynamics</h3>
-                <p className="tldr">
-                  <span>TL;DR</span> Combining frozen V-JEPA ViT-L
-                  representations with 3D state history to predict future
-                  position, velocity, and video.
-                </p>
-                <p>
-                  A closed-loop autoregressive predictor forecasts 60 future
-                  frames from 32-frame visual context. A decoder trained from
-                  scratch reconstructs 256 × 256 RGB frames with separate
-                  object, background, and alpha components.
-                </p>
-                <p className="finding">
-                  32 context frames → 60 future frames · ~1 second at 60 FPS
-                </p>
-                <details>
-                  <summary>Architecture & training</summary>
-                  <p>
-                    Backpropagation through time trains the predictor on its own
-                    recursively predicted states and V-JEPA latent tokens,
-                    targeting long-horizon error accumulation and distribution
-                    shift. The RGB decoder uses position, velocity,
-                    acceleration, and temporal-consistency objectives to
-                    encourage physically plausible predictions.
-                  </p>
-                </details>
-              </div>
-            </article>
-            <article className="research-row">
-              <Figure
-                file="conversation.svg"
-                alt="Conceptual conversation trajectories and activation steering directions in a hidden representation space"
-                caption="Conceptual illustration · not an experimental plot"
-              />
-              <div className="research-copy">
-                <div className="venue">
-                  LLM dynamics · Mechanistic interpretability
-                </div>
-                <h3>The geometry of multi-turn conversations</h3>
-                <p className="tldr">
-                  <span>TL;DR</span> Studying how LLMs shape each other’s
-                  conversational trajectories, and testing whether those
-                  dynamics can be changed through activation steering.
-                </p>
-                <p>
-                  Self-play and mixed-play interactions expose model-specific
-                  conversational attractors. Trajectory, basin, and
-                  endpoint-pull analyses measure how models influence each other
-                  across hidden activation spaces.
-                </p>
-                <p className="finding">
-                  Hidden-state analysis → controlled causal interventions
-                </p>
-                <details>
-                  <summary>Analysis & interventions</summary>
-                  <p>
-                    Differential influence vectors isolate interaction-related
-                    directions in hidden activations. Layer-wise causal steering
-                    uses controlled λ-sweeps and random-vector baselines to test
-                    the effect of those directions on dialogue dynamics.
-                  </p>
-                </details>
-              </div>
-            </article>
-          </section>
           <section id="patents" className="section">
             <header className="section-heading">
               <h2>Patents</h2>
               <span className="section-meta">
-                3 inventions · Samsung Electronics
+                2 granted · 1 pending
               </span>
             </header>
             <p className="section-description">
               Video segmentation, contextual generation, and adaptive displays.
-              Identifiers below refer to published applications.
+              Grant identifiers are shown for issued patents, with the pending application listed separately.
             </p>
             {patents.map((patent) => (
               <article className="research-row patent-row" key={patent.id}>
@@ -321,7 +248,7 @@ export default function Home() {
                 />
                 <div className="research-copy">
                   <div className="venue">
-                    {patent.number} · {patent.year}
+                    {patent.number} · {patent.status}
                   </div>
                   <h3>
                     <a href={patent.href} target="_blank" rel="noreferrer">
@@ -342,80 +269,28 @@ export default function Home() {
             <header className="section-heading">
               <h2>Experience</h2>
               <a
-                href="./Pranay-Kashyap-Resume.pdf"
+                href="./resume/"
                 target="_blank"
                 rel="noreferrer"
               >
                 Full résumé ↗
               </a>
             </header>
-            <article className="experience-row">
-              <div className="company-logo kaliber">K</div>
-              <div>
-                <h3>Kaliber AI</h3>
-                <p className="role">
-                  Machine Learning Engineer <span>· Jun 2026–present</span>
-                </p>
-                <p>
-                  Multimodal predictive world models, autoregressive 3D
-                  trajectories, latent-to-RGB decoding, and causal analysis of
-                  LLM conversational dynamics.
-                </p>
-                <p className="role secondary">
-                  Machine Learning Intern <span>· May–Dec 2025</span>
-                </p>
-                <p>
-                  Built a real-time voice assistant with speaker-verified VAD,
-                  streaming Whisper, and interruptible TTS at under 2-second
-                  response latency. Deployed GPU inference with AWS, Docker,
-                  TensorRT, and Triton; developed multimodal person tracking
-                  using facial and fashion embeddings.
-                </p>
-              </div>
-            </article>
-            <article className="experience-row">
-              <div className="company-logo samsung">S</div>
-              <div>
-                <h3>Samsung Research</h3>
-                <p className="role">
-                  Senior Software Engineer <span>· Mar–Aug 2024</span>
-                </p>
-                <p className="role">
-                  Software Engineer <span>· Jul 2022–Feb 2024</span>
-                </p>
-                <p className="role">
-                  Software Engineer Intern <span>· Jan–Jul 2022</span>
-                </p>
-                <p>
-                  Developed on-device event boundary detection for{" "}
-                  <strong>Video Moments in Enhance-X</strong>. Reduced model
-                  size by 71.4% with ONNX quantization and improved
-                  video-processing latency by 20%. Research across lightweight
-                  video models led to five papers and three patent publications.
-                </p>
-              </div>
-            </article>
-            <article className="experience-row">
-              <div className="company-logo tolstoy">t</div>
-              <div>
-                <h3>Tolstoy</h3>
-                <p className="role">
-                  Machine Learning Engineer <span>· May–Aug 2020</span>
-                </p>
-                <p>
-                  Built text classification and an OCR / named-entity
-                  recognition pipeline for specimen labels, with Flask APIs and
-                  interactive Streamlit applications.
-                </p>
-              </div>
-            </article>
-            <div className="toolkit">
-              <strong>Tools I work with</strong>
-              <p>
-                PyTorch · Python · V-JEPA · CUDA · ONNX · TensorRT · Triton ·
-                FastAPI · Docker · AWS · FFmpeg
-              </p>
-            </div>
+            {experience.map((job) => (
+              <article className="experience-row" key={`${job.company}-${job.role}`}>
+                <div className={`company-logo ${job.company === "Kaliber AI" ? "kaliber" : "samsung"}`} aria-hidden="true">{job.company[0]}</div>
+                <div><h3>{job.company}</h3><p className="role">{job.role} <span>· {job.dates}</span></p>
+                  <p className="experience-note">{job.location}{job.note ? ` · ${job.note}` : ""}</p>
+                  <p>{job.bullets[0]}</p>
+                  <details><summary>Explore contributions ({job.bullets.length - 1} more)</summary><ul className="contribution-list">{job.bullets.slice(1).map(bullet => <li key={bullet}>{bullet}</li>)}</ul></details>
+                </div>
+              </article>
+            ))}
+          </section>
+          <section id="skills" className="section">
+            <header className="section-heading"><h2>Technical toolkit</h2></header>
+            <p className="section-description">The methods and systems behind the work.</p>
+            <div className="skills-grid">{skills.map(group => <article key={group.label}><h3>{group.label}</h3><p>{group.text}</p></article>)}</div>
           </section>
           <section id="education" className="section">
             <header className="section-heading">
